@@ -18,5 +18,5 @@ COPY --from=build /app/target/CRUD_HESTIA-JDBC_Servlet-1.0-SNAPSHOT.war /usr/loc
 # Expõe a porta 8080 para acesso ao aplicativo
 EXPOSE 8080
 
-# Define o comando para iniciar o Tomcat
-CMD ["catalina.sh", "run"]
+# Define o comando para iniciar o Tomcat, especificando o caminho completo para o catalina.sh
+CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
